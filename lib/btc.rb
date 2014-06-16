@@ -1,4 +1,4 @@
-require 'big_decimal'
+require 'bigdecimal'
 
 class Btc
   SATOSHI = BigDecimal.new('0.00000001')
