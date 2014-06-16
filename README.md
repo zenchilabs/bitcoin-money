@@ -1,4 +1,4 @@
-# Bitcoin::Money
+# Bitcoin Money!
 
 TODO: Write a gem description
 
