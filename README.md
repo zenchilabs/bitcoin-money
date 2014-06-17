@@ -45,9 +45,9 @@ b.btc # => BigDecimal.new('0.012')
 
 Perform operations.
 ~~~ruby
-a + b # == Bitcoin.new(0.024)
-a * a # == Bitcoin.new(0.000144)
-a / c # == Bitcoin.new(1)
+a + b # == Btc.new(0.024)
+a * a # == Btc.new(0.000144)
+a / c # == Btc.new(1)
 # also ** and -
 ~~~
 
