@@ -34,10 +34,14 @@ describe Btc do
     expect(Btc.from_satoshis(1000).mbtc).to eq(BigDecimal.new('0.1'))
   end
 
-  it 'should use equaliy correctly' do
+  it 'should use equality correctly' do
     expect(Btc.new(0.1234)).to eq(Btc.from_mbtc(1234))
     expect(Btc.new(0.1234)).to eq(Btc.from_satoshis(12340000))
     expect(Btc.from_mbtc(12)).to eq(Btc.from_satoshis(120000))
   end
 
+  it 'should use multiplication correctly' do
+    expect(Btc.new(0.1234) * Btc.new(0.1234)).to
+        eq(Btc.new(BigDecimal.new('0.1234') * BigDecimal.new('0.1234')))
+  end
 end
