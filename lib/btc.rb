@@ -60,11 +60,15 @@ class Btc
     Btc.new(@amt * other.btc)
   end
 
+  def **(exp)
+    Btc.new(@amt ** exp)
+  end
+
   def ==(other)
     @amt == other.btc
   end
 
   def inspect
-    "#<Btc BTC:#{btc} mBTC:#{mbtc} satoshis:#{satoshis}>"
+    "#<Btc BTC:#{btc} mBTC:#{mbtc} Satoshis:#{satoshis}>"
   end
 end

@@ -1,6 +1,9 @@
 # Bitcoin Money!
 
-TODO: Write a gem description
+The Money gem is a popular gem for Ruby. 
+Ruby needs a gem like Money, for Bitcoin!
+
+But BTC is unique, so this simple object should be unique.
 
 ## Installation
 
@@ -17,11 +20,35 @@ Or install it yourself as:
     $ gem install bitcoin-money
 
 ## Usage
+
+Require it! 
+
+`require 'btc'`
+
+Create from whichever unit of BTC.
 ~~~ruby
-b = Btc.new(0.012) 
-b.mbtc # => BigDecimal.new('120.0')
-b.satoshis # => BigDecimal.new('1200000.0')
-b.btc # => BigDecimal.new('0.0012')
+a = Btc.new(0.012) 
+b = Btc.from_mbtc(12)
+c = Btc.from_satoshis(120000)
+a == b # true
+b == c # true
+# a == b == c
+~~~
+
+Get value in any unit of BTC.
+~~~ruby
+b # => #<Btc BTC:0.012 mBTC: 12.0 Satoshis: 120000.0>
+b.mbtc # => BigDecimal.new('12.0')
+b.satoshis # => BigDecimal.new('120000.0')
+b.btc # => BigDecimal.new('0.012')
+~~~
+
+Perform operations.
+~~~ruby
+a + b # == Bitcoin.new(0.024)
+a * a # == Bitcoin.new(0.000144)
+a / c # == Bitcoin.new(1)
+# also ** and -
 ~~~
 
 ## Contributing

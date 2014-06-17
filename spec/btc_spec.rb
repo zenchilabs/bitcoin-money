@@ -41,7 +41,18 @@ describe Btc do
   end
 
   it 'should use multiplication correctly' do
-    expect(Btc.new(0.1234) * Btc.new(0.1234)).to
-        eq(Btc.new(BigDecimal.new('0.1234') * BigDecimal.new('0.1234')))
+    expect(Btc.new(0.1234) * Btc.new(0.1234)).to eq(Btc.new(BigDecimal.new('0.1234') * BigDecimal.new('0.1234')))
+  end
+
+  it 'should use division correctly' do
+    expect(Btc.new(0.1234) / Btc.new(0.1234)).to eq(Btc.new(BigDecimal.new('0.1234') / BigDecimal.new('0.1234')))
+  end
+
+  it 'should use addition correctly' do
+    expect(Btc.new(0.1234) + Btc.new(0.1234)).to eq(Btc.new(BigDecimal.new('0.1234') + BigDecimal.new('0.1234')))
+  end
+
+  it 'should use subtraction correctly' do
+    expect(Btc.new(0.1234) - Btc.new(0.1234)).to eq(Btc.new(BigDecimal.new('0.1234') - BigDecimal.new('0.1234')))
   end
 end
