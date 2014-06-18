@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "bitcoin-money"
-  spec.version       = "0.1.1"
+  spec.version       = "0.5.0"
   spec.authors       = ["James Larisch"]
   spec.email         = ["root@jameslarisch.com"]
   spec.summary       = "Represent BTC like Money, with nice precision."
