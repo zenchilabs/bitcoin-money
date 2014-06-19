@@ -72,4 +72,12 @@ describe Btc do
   it 'should use subtraction correctly' do
     expect(Btc.new(0.1234) - Btc.new(0.1234)).to eq(Btc.new(BigDecimal.new('0.1234') - BigDecimal.new('0.1234')))
   end
+
+  it 'should use to_f correctly' do
+    expect(Btc.new(1.5).to_f).to eq(1.5)
+  end
+
+  it 'should use to_i correctly' do
+    expect(Btc.new(1.4).to_i).to eq(1)
+  end
 end

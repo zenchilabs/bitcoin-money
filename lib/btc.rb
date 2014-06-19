@@ -63,6 +63,14 @@ class Btc
     @amt / SATOSHI
   end
 
+  def to_f
+    @amt.to_f
+  end
+
+  def to_i
+    @amt.to_i
+  end
+
   def +(other)
     Btc.new(@amt + other.btc)
   end
