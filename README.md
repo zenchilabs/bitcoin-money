@@ -27,9 +27,9 @@ Require it!
 
 Create from whichever unit of BTC.
 ~~~ruby
-a = Btc.new(0.012) 
-b = Btc.from_mbtc(12)
-c = Btc.from_satoshis(120000)
+a = BTC.new(0.012) 
+b = BTC.from_mbtc(12)
+c = BTC.from_satoshis(120000)
 a == b # true
 b == c # true
 # a == b == c
@@ -45,9 +45,9 @@ b.btc # => BigDecimal.new('0.012')
 
 Perform operations.
 ~~~ruby
-a + b # == Btc.new(0.024)
-a * a # == Btc.new(0.000144)
-a / c # == Btc.new(1)
+a + b # == BTC.new(0.024)
+a * a # == BTC.new(0.000144)
+a / c # == BTC.new(1)
 # also ** and -
 ~~~
 
